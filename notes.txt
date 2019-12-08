@@ -1,0 +1,13 @@
+-declarative/functional = using built in method like reduce 
+-and imprative programing= for loop or while loop
+-reduce=takes the current number and the previous number and adds it back and then passes to next index recurresively
+a =previous item , b= current item
+
+function simpleArraySum(ar) {
+	return ar.reduce((a, b) => { return a += b})
+}
+
+
+git add . 
+git commit -m'message'
+git push -u origin master
