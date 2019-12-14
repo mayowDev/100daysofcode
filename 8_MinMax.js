@@ -27,8 +27,15 @@ Sample Output
 
 10 14
 
+Hint::
+
+-min sum = the sum of first four elemets , 
+the last element is ommited/removed
+-max sum= the sum of last four , the first element is ommited
+-be aware to sort order the array.
+-dont mutate the original array, just make copy of it
 */
-let arr = [1, 3, 5, 7, 9];
+let arr = [9, 3, 1, 7, 5];
 
 // Complete the miniMaxSum function below.
 function miniMaxSum(arr) {
@@ -39,10 +46,13 @@ function miniMaxSum(arr) {
     sum += newArr[i];
   }
 
-  let min = sum - newArr[0];
-  let max = sum - newArr[newArr.length - 1];
+  let max = sum - newArr[0]; //newArr[0]= first element
+  let min = sum - newArr[newArr.length - 1];
+  // newArr.length - 1 = last element
 
-  console.log(max, min);
+  console.log(min, max);
+  console.log(arr);
+  console.log(newArr);
 }
 
 miniMaxSum(arr);
